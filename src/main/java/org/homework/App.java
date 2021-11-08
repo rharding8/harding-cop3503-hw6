@@ -1,16 +1,11 @@
 package org.homework;
 
 import org.jgrapht.Graph;
-import org.jgrapht.alg.clique.DegeneracyBronKerboschCliqueFinder;
 import org.jgrapht.graph.DefaultDirectedGraph;
 import org.jgrapht.graph.DefaultEdge;
-import org.jgrapht.graph.SimpleDirectedGraph;
 import org.jgrapht.util.SupplierUtil;
-
-import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.Map;
-import java.util.Set;
 
 public class App {
   public static void main(String[] args) {
@@ -18,7 +13,7 @@ public class App {
     Map<DefaultEdge, Double> W;
     Vertex[] vertices = new Vertex[8];
     System.out.println("Test No. 1");
-    G = new DefaultDirectedGraph<Vertex, DefaultEdge>(SupplierUtil.createSupplier(Vertex.class), SupplierUtil.DEFAULT_EDGE_SUPPLIER,false);
+    G = new DefaultDirectedGraph<>(SupplierUtil.createSupplier(Vertex.class), SupplierUtil.DEFAULT_EDGE_SUPPLIER, false);
     W = new HashMap<>();
     generateGraph1(G, W, vertices);
     Dijkstra.binaryDijkstra(G, W, vertices[0]);
@@ -29,7 +24,7 @@ public class App {
       System.out.println("Test Failed");
     }
     System.out.println("Test No. 2");
-    G = new DefaultDirectedGraph<Vertex, DefaultEdge>(SupplierUtil.createSupplier(Vertex.class), SupplierUtil.DEFAULT_EDGE_SUPPLIER,false);
+    G = new DefaultDirectedGraph<>(SupplierUtil.createSupplier(Vertex.class), SupplierUtil.DEFAULT_EDGE_SUPPLIER, false);
     W = new HashMap<>();
     generateGraph2(G, W, vertices);
     Dijkstra.fibonacciDijkstra(G, W, vertices[0]);
@@ -40,7 +35,7 @@ public class App {
       System.out.println("Test Failed");
     }
     System.out.println("Test No. 3");
-    G = new DefaultDirectedGraph<Vertex, DefaultEdge>(SupplierUtil.createSupplier(Vertex.class), SupplierUtil.DEFAULT_EDGE_SUPPLIER,false);
+    G = new DefaultDirectedGraph<>(SupplierUtil.createSupplier(Vertex.class), SupplierUtil.DEFAULT_EDGE_SUPPLIER, false);
     W = new HashMap<>();
     generateGraph3(G, W, vertices);
     Dijkstra.binaryDijkstra(G, W, vertices[4]);
@@ -51,7 +46,7 @@ public class App {
       System.out.println("Test Failed");
     }
     System.out.println("Test No. 4");
-    G = new DefaultDirectedGraph<Vertex, DefaultEdge>(SupplierUtil.createSupplier(Vertex.class), SupplierUtil.DEFAULT_EDGE_SUPPLIER,false);
+    G = new DefaultDirectedGraph<>(SupplierUtil.createSupplier(Vertex.class), SupplierUtil.DEFAULT_EDGE_SUPPLIER, false);
     W = new HashMap<>();
     generateGraph4(G, W, vertices);
     Dijkstra.fibonacciDijkstra(G, W, vertices[0]);
@@ -62,7 +57,7 @@ public class App {
       System.out.println("Test Failed");
     }
     System.out.println("Test No. 5");
-    G = new DefaultDirectedGraph<Vertex, DefaultEdge>(SupplierUtil.createSupplier(Vertex.class), SupplierUtil.DEFAULT_EDGE_SUPPLIER,false);
+    G = new DefaultDirectedGraph<>(SupplierUtil.createSupplier(Vertex.class), SupplierUtil.DEFAULT_EDGE_SUPPLIER, false);
     W = new HashMap<>();
     generateGraph5(G, W, vertices);
     Dijkstra.binaryDijkstra(G, W, vertices[2]);
@@ -73,7 +68,7 @@ public class App {
       System.out.println("Test Failed");
     }
     System.out.println("Test No. 6");
-    G = new DefaultDirectedGraph<Vertex, DefaultEdge>(SupplierUtil.createSupplier(Vertex.class), SupplierUtil.DEFAULT_EDGE_SUPPLIER,false);
+    G = new DefaultDirectedGraph<>(SupplierUtil.createSupplier(Vertex.class), SupplierUtil.DEFAULT_EDGE_SUPPLIER, false);
     W = new HashMap<>();
     generateGraph6(G, W, vertices);
     Dijkstra.fibonacciDijkstra(G, W, vertices[1]);
@@ -84,7 +79,7 @@ public class App {
       System.out.println("Test Failed");
     }
     System.out.println("Test No. 7");
-    G = new DefaultDirectedGraph<Vertex, DefaultEdge>(SupplierUtil.createSupplier(Vertex.class), SupplierUtil.DEFAULT_EDGE_SUPPLIER,false);
+    G = new DefaultDirectedGraph<>(SupplierUtil.createSupplier(Vertex.class), SupplierUtil.DEFAULT_EDGE_SUPPLIER, false);
     W = new HashMap<>();
     generateGraph7(G, W, vertices);
     Dijkstra.binaryDijkstra(G, W, vertices[3]);
@@ -95,7 +90,7 @@ public class App {
       System.out.println("Test Failed");
     }
     System.out.println("Test No. 8");
-    G = new DefaultDirectedGraph<Vertex, DefaultEdge>(SupplierUtil.createSupplier(Vertex.class), SupplierUtil.DEFAULT_EDGE_SUPPLIER,false);
+    G = new DefaultDirectedGraph<>(SupplierUtil.createSupplier(Vertex.class), SupplierUtil.DEFAULT_EDGE_SUPPLIER, false);
     W = new HashMap<>();
     generateGraph8(G, W, vertices);
     Dijkstra.fibonacciDijkstra(G, W, vertices[2]);
@@ -106,7 +101,7 @@ public class App {
       System.out.println("Test Failed");
     }
     System.out.println("Test No. 9");
-    G = new DefaultDirectedGraph<Vertex, DefaultEdge>(SupplierUtil.createSupplier(Vertex.class), SupplierUtil.DEFAULT_EDGE_SUPPLIER,false);
+    G = new DefaultDirectedGraph<>(SupplierUtil.createSupplier(Vertex.class), SupplierUtil.DEFAULT_EDGE_SUPPLIER, false);
     W = new HashMap<>();
     generateGraph9(G, W, vertices);
     Dijkstra.binaryDijkstra(G, W, vertices[2]);
@@ -117,7 +112,7 @@ public class App {
       System.out.println("Test Failed");
     }
     System.out.println("Test No. 10");
-    G = new DefaultDirectedGraph<Vertex, DefaultEdge>(SupplierUtil.createSupplier(Vertex.class), SupplierUtil.DEFAULT_EDGE_SUPPLIER,false);
+    G = new DefaultDirectedGraph<>(SupplierUtil.createSupplier(Vertex.class), SupplierUtil.DEFAULT_EDGE_SUPPLIER, false);
     W = new HashMap<>();
     generateGraph10(G, W, vertices);
     Dijkstra.binaryDijkstra(G, W, vertices[6]);
